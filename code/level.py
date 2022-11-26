@@ -3,7 +3,7 @@ from settings import *
 from tile import Tile
 from player import Player
 from debug import debug
-from tile import Asztal
+
 
 class Level:
 	def __init__(self):
@@ -27,8 +27,7 @@ class Level:
 					Tile((x,y),[self.visible_sprites,self.obstacle_sprites])
 				if col == 'p':
 					self.player = Player((x,y),[self.visible_sprites],self.obstacle_sprites)
-				if col == 'a':
-					Asztal((x,y),[self.visible_sprites,self.obstacle_sprites])
+
 
 	def run(self):
 		# update and draw the game
