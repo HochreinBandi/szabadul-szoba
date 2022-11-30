@@ -3,6 +3,7 @@ from settings import *
 from tile import Tile
 from player import Player
 from debug import debug
+from tile import Asztal
 
 
 class Level:
@@ -25,6 +26,8 @@ class Level:
 				y = row_index * TILESIZE
 				if col == 'x':
 					Tile((x,y),[self.visible_sprites,self.obstacle_sprites])
+				if col == 'a':
+					Asztal((x,y),[self.visible_sprites,self.obstacle_sprites])
 				if col == 'p':
 					self.player = Player((x,y),[self.visible_sprites],self.obstacle_sprites)
 
